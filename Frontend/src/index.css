@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 font-sans;
+  }
+}
+
+@layer components {
+  /* Botões */
+  .btn-primary {
+    @apply bg-vectra-blue hover:bg-vectra-dark-blue text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply bg-neutral-medium hover:bg-neutral-dark text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-vectra-blue text-vectra-blue hover:bg-vectra-blue hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+  }
+  
+  .btn-success {
+    @apply bg-success hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+  }
+  
+  .btn-danger {
+    @apply bg-error hover:bg-red-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200;
+  }
+  
+  .btn-premium {
+    @apply bg-gradient-to-r from-premium-gold to-premium-light-gold text-premium-black font-bold py-3 px-6 rounded-lg transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  
+  /* Inputs */
+  .input {
+    @apply w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:ring-2 focus:ring-vectra-blue focus:border-vectra-blue focus:outline-none transition-all duration-200 bg-white;
+  }
+  
+  .input-error {
+    @apply border-error focus:ring-error focus:border-error;
+  }
+  
+  /* Cards */
+  .card {
+    @apply bg-white shadow-lg rounded-xl p-6 hover:shadow-xl transition-shadow duration-200;
+  }
+  
+  .card-premium {
+    @apply bg-gradient-to-br from-premium-black via-premium-graphite to-premium-gray text-premium-white shadow-2xl rounded-xl p-6;
+  }
+  
+  /* Badges */
+  .badge {
+    @apply px-3 py-1 rounded-full text-xs font-semibold uppercase;
+  }
+  
+  .badge-success {
+    @apply bg-success/20 text-success;
+  }
+  
+  .badge-error {
+    @apply bg-error/20 text-error;
+  }
+  
+  .badge-warning {
+    @apply bg-warning/20 text-yellow-800;
+  }
+  
+  .badge-info {
+    @apply bg-vectra-light-blue/20 text-vectra-blue;
+  }
+  
+  /* Container */
+  .container-vectra {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Animações */
+  .fade-in {
+    @apply animate-fade-in;
+  }
+  
+  .slide-in {
+    @apply animate-slide-in;
+  }
+}
+
+@layer utilities {
+  .text-gradient-vectra {
+    @apply bg-gradient-to-r from-vectra-blue to-vectra-light-blue bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-premium {
+    @apply bg-gradient-to-r from-premium-gold to-premium-light-gold bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient-vectra {
+    @apply bg-gradient-to-r from-vectra-blue to-vectra-light-blue;
+  }
+  
+  .bg-gradient-premium {
+    @apply bg-gradient-to-r from-premium-black via-premium-graphite to-premium-gray;
+  }
+}
+
+/* Animações customizadas */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-in;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
+
+/* Toast customization */
+.Toastify__toast--success {
+  @apply bg-success;
+}
+
+.Toastify__toast--error {
+  @apply bg-error;
+}
+
+.Toastify__toast--warning {
+  @apply bg-warning text-gray-900;
+}
+
+.Toastify__toast--info {
+  @apply bg-vectra-blue;
+}
